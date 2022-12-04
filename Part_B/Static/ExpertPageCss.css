@@ -1,0 +1,18 @@
+body{
+    background-image: url("../Static/Pictures/MP.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+.grid-item {
+    background-color: wheat;
+    border: 5px solid black;
+    padding: 50px;
+    margin: 30px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    }
