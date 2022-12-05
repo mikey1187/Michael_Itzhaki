@@ -14,6 +14,7 @@
 
   .headLine{
     border: 5px outset whitesmoke;
+    border-radius: 15px;
     background-color: lightblue;
     text-align: center;
     position:relative;
@@ -23,55 +24,62 @@
   .header1{
     font-family: 'Times New Roman', Times, serif;
   }
-  .grid-container {
+  .container {
     display: grid;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     grid-template-columns: auto auto auto;
-    padding: 10px;
   }
-  .grid-item {
-    background-color: wheat;
-    border: 5px solid black;
+  .btn{
+    border: solid #777;
+    background-color: black;
+    border-radius: 10px;
+    margin: 25px;
     padding: 60px;
-    margin: 30px;
+    width: 300px;
+    text-transform: uppercase;
+    cursor: pointer;
     font-size: 30px;
+    color: #777;
 
   }
- #knee{
-    background-image: url(../Static/Pictures/Knee.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
- }
- #ankle{
-    background-image: url(../Static/Pictures/ANKLE.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 70px;
- }
- #shoulder{
-    background-image: url(../Static/Pictures/SHOULDER.jfif);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
- }
- #hip{
-    background-image: url(../Static/Pictures/HIP.webp);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top;
-    height: 70px;
- }
- #hand{
-    background-image: url(../Static/Pictures/HAND.jfif);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
- }
- #elbow{
-    background-image: url(../Static/Pictures/ELBOW.jfif);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
- }
-  
+.b1{
+  background-image: url(../Static/Pictures/Knee.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.b2{
+  background-image: url(../Static/Pictures/ANKLE.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.b3{
+  background-image: url(../Static/Pictures/SHOULDER.jfif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.b4{
+  background-image: url(../Static/Pictures/HIP.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: -10px;
+}
+.b5{
+  background-image: url(../Static/Pictures/HAND.jfif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.b6{
+  background-image: url(../Static/Pictures/ELBOW.jfif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
