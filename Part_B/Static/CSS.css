@@ -1,8 +1,12 @@
 /* HOME PAGE CSS*/
+
+@media screen {
+  
+
   body, html{
     height: 100%;
   }
-  
+
   .HomePageBody{
     
     background-image: url("../Static/Pictures/Runner.jfif");
@@ -24,65 +28,134 @@
   .headerHp{
     font-family: 'Times New Roman', Times, serif;
   }
-  .containerHp {
+  .container{
     display: grid;
     position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 10%;
     grid-template-columns: auto auto auto;
+    padding: 50px;
+    margin: 30px;
+    height: 50px;
+    
   }
-  .btn{
-    border: solid #777;
-    background-color: black;
-    border-radius: 10px;
-    margin: 25px;
-    padding: 60px;
+  .image {
+    position: relative;
     width: 300px;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-size: 30px;
-    color: #777;
+    height: 150px;
+    border: solid black;
+    border-radius: 6px;
+    margin: 30px;
+    
+    
+  }
+  .i1{
+    background-image: url(../Static/Pictures/Knee.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  .i2{
+    background-image: url(../Static/Pictures/ANKLE.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .i3{
+    background-image: url(../Static/Pictures/HIP.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-y: 0px;
+  }
+  .i4{
+    background-image: url(../Static/Pictures/HAND.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .i5{
+    background-image: url(../Static/Pictures/ELBOW.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
   }
-.b1{
-  background-image: url(../Static/Pictures/Knee.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.b2{
-  background-image: url(../Static/Pictures/ANKLE.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.b3{
-  background-image: url(../Static/Pictures/SHOULDER.jfif);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.b4{
-  background-image: url(../Static/Pictures/HIP.webp);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position-y: -10px;
-}
-.b5{
-  background-image: url(../Static/Pictures/HAND.jfif);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.b6{
-  background-image: url(../Static/Pictures/ELBOW.jfif);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  .i6{
+    background-image: url(../Static/Pictures/SHOULDER.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
+  
+  .image__img {
+    display: block;
+    width: 100%;
+  }
+  
+  .image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  
+  .image__overlay--blur {
+    backdrop-filter: blur(5px);
+  }
+  
+  .image__overlay--primary {
+    background: #0e299e;
+  }
+  
+  .image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+  }
+  
+  .image__overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .image__overlay:hover>* {
+    transform: translateY(0);
+  }
+  
+  .image__title {
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+  }
+  
+  .review{
+    position: relative ;
+    left: 42%;
+    top: 70%;
+    width: 200px;
+    height: 30px;
+    background-color: aqua;
+    text-align: center;
+    font-family: 'Quiqsand';
+    cursor: pointer;
+  }
+  
 
 
 
@@ -231,13 +304,35 @@ path.two {
     text-align: center;
     font-size: 30px;
     }
-    
+  
+.sort{
+  position: relative;
+  left: 85%;
+  top: 60px;
+  padding: 5px;
+
+ 
+}
+
+
+.btn{
+  border: solid black;
+  width: 60px;
+  height: 30px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  background-color: lightblue;
+  font-size: 16px;
+
+}
+
 .containerDoc{ 
     display: grid;
     grid-template-columns: auto;
-    position: absolute;
+    position: relative;
     left: 72%;
-    top: 120px;
+    top: 70px;
     border-color: solid #777;
     }
     
@@ -253,3 +348,36 @@ path.two {
     font-size: 25px;
     cursor: pointer;
     }
+    /*review page*/
+    body{
+      background-image: url(../Static/Pictures/review.jfif);
+      background-repeat: no-repeat;
+      background-color: #eedede;
+
+    }
+    .header{
+      position: relative;
+      top: 5%;
+      left: 65%;
+      border: solid #222222;
+      border-radius: 6px;
+      width: 300px;
+      text-align: center;
+    }
+    .form{
+      position: relative;
+      top: 10%;
+      left: 70%;
+    }
+  .star{
+    font-size: 2rem;
+    color: #ff9800;
+    background-color: unset;
+    border: none;
+    position: relative;
+    left: -1%;
+  }
+  .star:hover{
+    cursor: pointer;
+  }
+}
