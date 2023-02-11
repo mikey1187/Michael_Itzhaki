@@ -1,17 +1,31 @@
 function ExpertsPage() {
-    window.location.href = ("file:///C:/Users/user/OneDrive%20-%20post.bgu.ac.il/Documents/%D7%94%D7%A9%D7%9B%D7%9C%D7%94/%D7%A1%D7%9E%D7%A1%D7%98%D7%A8%20%D7%94/WEB/Michael_Itzhaki/Part_B/View/ExpertPage.html");
+    window.location.href = ("http://localhost:3000/ExpertPage.html");
 }
 
 function ToExperts(){
-    window.location.href = ("file:///C:/Users/user/OneDrive%20-%20post.bgu.ac.il/Documents/%D7%94%D7%A9%D7%9B%D7%9C%D7%94/%D7%A1%D7%9E%D7%A1%D7%98%D7%A8%20%D7%94/WEB/Michael_Itzhaki/Part_B/View/Doctors.html");
+    window.location.href = ("http://localhost:3000/Doctors.html");
 
 }
 function toDoc(){
     window.location.href = ("https://hmc.co.il/doctor/%D7%92%D7%99%D7%9C-%D7%A8%D7%A6%D7%91%D7%A1%D7%A7%D7%99/")
 }
 function addReview(){
-    window.location.href = ("file:///C:/Users/user/OneDrive%20-%20post.bgu.ac.il/Documents/%D7%94%D7%A9%D7%9B%D7%9C%D7%94/%D7%A1%D7%9E%D7%A1%D7%98%D7%A8%20%D7%94/WEB/Michael_Itzhaki/Part_B/View/review.html")
+    window.location.href = ("http://localhost:3000/review.html")
 }
+
+function tohome(){
+    window.location.href = ("http://localhost:3000/HomePage.html")
+}
+function active(){
+const activepage = window.location.pathname;
+const navbtns = document.querySelectorAll("btns").forEach( btn =>{
+    if(btn.innerHTML == activepage){
+        btn.classList.add('active');
+     }
+    });
+}
+
+
 function validateForm() {
     let x = document.forms["addReview"]["email"].value;
     if (x == "") {
@@ -41,6 +55,23 @@ allStars.forEach( (star, i) =>{
             }
 
         })
-        
+        document.querySelector("#rating").value = currentStarLevel;
+        console.log(document.querySelector("#rating").value);
     }
 })
+
+
+
+
+
+window.addEventListener("load", function() {
+    var currentPage = window.location.pathname.split("/").pop();
+    var navItems = document.querySelectorAll(".nav-item");
+    for (var i = 0; i < navItems.length; i++) {
+      var id = navItems[i].getAttribute("id");
+      if (id + ".html" === currentPage) {
+        navItems[i].classList.add("active");
+      }
+    }
+  });
+  

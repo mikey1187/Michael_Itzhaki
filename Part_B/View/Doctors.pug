@@ -1,0 +1,23 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/CSS.css')
+  script(defer='' src='/JS.js')
+  title Doctors
+body
+  div.DoctorsBody
+    nav.navbar
+      a#HomePage.nav-item(href='HomePage.html') HomePage
+      a#ExpertPage.nav-item(href='ExpertPage.html') ExpertPage
+      a#Doctors.nav-item(href='Doctors.html') Doctors
+    .headerDoc
+      span The Best Doctor For You
+    .sort
+      button.btn.geoLocation Nearst
+      button.btn.reviews Higest
+    .containerDoc
+      ul
+        each doctor in doctors
+         li #{doctors.name}

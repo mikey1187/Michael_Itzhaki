@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Static/CSS.css">
-    <script src="../Static/JS.js"></script>
+    <script defer src="../Static/JS.js"></script>
     <title>Add A Review</title>
 </head>
-<body>
+<body class="ReviewBody">
+
+    
     <h1 class="header"> Add A New Review</h1>
     <div class="form" >
     <form name="addReview" onsubmit="return validateForm()" method="post">
@@ -17,14 +19,13 @@
         <label for="doctorName"> Doctor Name:</label><br>
         <input type="text" id="doctorName" name="doctorName"><br><br>
         <div class="starReview">
-            <button class="star">&#9734;</button>
-            <button class="star">&#9734;</button>
-            <button class="star">&#9734;</button>
-            <button class="star">&#9734;</button>
-            <button class="star">&#9734;</button>
-            
+            <i class="star">&#9734;</i>
+            <i class="star">&#9734;</i>
+            <i class="star">&#9734;</i>
+            <i class="star">&#9734;</i>
+            <i class="star">&#9734;</i>
         </div>
-
+        <input type="hidden" id="rating" name="rating" value="0">
         <br><br>
         <input type="submit" value="Submit"> 
       </form>  

@@ -1,28 +1,26 @@
 /* HOME PAGE CSS*/
 
 @media screen {
-  
-
-  body, html{
+   body, html{
     height: 100%;
+    overflow:hidden ;
   }
 
-  .HomePageBody{
-    
-    background-image: url("../Static/Pictures/Runner.jfif");
+  .background{
+    background-image: url(/Pictures/Runner.jpg);
     height: 100%;
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+   
   }
-
   .headLineHp{
     border: 5px outset whitesmoke;
     border-radius: 15px;
     background-color: lightblue;
     text-align: center;
     position:relative;
-    top: 5%;
+    top: 10%;
     }
 
   .headerHp{
@@ -49,40 +47,40 @@
     
   }
   .i1{
-    background-image: url(../Static/Pictures/Knee.jpg);
+    background-image: url(/Pictures/Knee.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
   }
 
   .i2{
-    background-image: url(../Static/Pictures/ANKLE.jpg);
+    background-image: url(/Pictures/ANKLE.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   .i3{
-    background-image: url(../Static/Pictures/HIP.webp);
+    background-image: url(/Pictures/HIP.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-position-y: 0px;
   }
   .i4{
-    background-image: url(../Static/Pictures/HAND.jfif);
+    background-image: url(/Pictures/HAND.jfif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   .i5{
-    background-image: url(../Static/Pictures/ELBOW.jfif);
+    background-image: url(/Pictures/ELBOW.jfif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
   }
   .i6{
-    background-image: url(../Static/Pictures/SHOULDER.jfif);
+    background-image: url(/Pictures/SHOULDER.jfif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -161,9 +159,11 @@
 
 /* EXPERT PAGE CSS*/
 .ExpertPageBody{
-    background-image: url("../Static/Pictures/MP.jfif");
-    background-repeat: no-repeat;
-    background-size: 100%;
+  background-image: url(/Pictures/MP.jfif);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .grid-container-Exp {
     display: grid;
@@ -286,10 +286,11 @@ path.two {
 
  /* DOCTORS PAGE CSS */
 .DoctorsBody{
-    background-image: url("../Static/Pictures/MJ.jfif");
+    background-image: url(/Pictures/MJ.jfif);
     background-repeat: no-repeat;
     background-size: 50%;
     background-color: rgb(53, 162, 192);
+    overflow-x: hidden;
     }
 .headerDoc{
     background-color: black;
@@ -326,6 +327,37 @@ path.two {
   font-size: 16px;
 
 }
+.navbar{
+  position: absolute;
+  left: 700px;
+
+ 
+}
+
+.nav-item.active {
+  background-color:#00ffae;
+  border: solid black;
+
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 10px;
+ }
+
+.nav-item {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid gray;
+  background-color: lightgray;
+}
+
+
+
+
 
 .containerDoc{ 
     display: grid;
@@ -349,12 +381,36 @@ path.two {
     cursor: pointer;
     }
     /*review page*/
-    body{
-      background-image: url(../Static/Pictures/review.jfif);
-      background-repeat: no-repeat;
-      background-color: #eedede;
-
+    .ReviewBody {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
     }
+    
+    .ReviewBody::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 50%;
+      top: 0;
+      bottom: 0;
+      background-image: url(/Pictures/review.jfif);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .ReviewBody::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #eedede;
+      z-index: -1;
+    }
+    
     .header{
       position: relative;
       top: 5%;
@@ -369,6 +425,10 @@ path.two {
       top: 10%;
       left: 70%;
     }
+  .starReview{
+    position: absolute;
+    top: 50%;
+  }
   .star{
     font-size: 2rem;
     color: #ff9800;

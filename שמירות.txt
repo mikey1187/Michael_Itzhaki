@@ -1,0 +1,5 @@
+// Serve the 'Static' folder as a static resource
+app.use(express.static('../Static/CSS.css'));
+// Serve the 'View' folder as a views folder
+app.set('views', 'View');
+app.set('view engine', 'pug');

@@ -1,0 +1,38 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/CSS.css')
+  script(defer='' src='/JS.js')
+  title DocForYou
+body 
+  div.background
+    nav.navbar
+      a#HomePage.nav-item(href='HomePage.html') HomePage
+      a#ExpertPage.nav-item(href='ExpertPage.html') ExpertPage
+      a#Doctors.nav-item(href='Doctors.html') Doctors
+    .headLineHp
+      h1#headerHp Choose Expertise
+    br
+    br
+    .container
+      .image.i1
+        .image__overlay.image__overlay--primary
+          button.image__title(onclick='location.href="ExpertPage.html"') KNEE
+      .image.i2
+        .image__overlay.image__overlay--primary
+          button.image__title(onclick='location.href="ExpertPage.html"') ANKLE
+      .image.i3
+        .image__overlay.image__overlay--primary
+          button.image__title(onclick='location.href="ExpertPage.html"') HIP
+      .image.i4
+        .image__overlay.image__overlay--primary
+          button.image__title(onclick='location.href="ExpertPage.html"') HAND
+      .image.i5
+        .image__overlay.image__overlay--primary
+          button.image__title(onclick='location.href="ExpertPage.html"') ELBOW
+      .image.i6
+        .image__overlay.image__overlay--primary
+          button.image__title(onclick='location.href="ExpertPage.html"') SHOULDER
+    button.review(onclick='location.href="review.html"') ADD A REVIEW
