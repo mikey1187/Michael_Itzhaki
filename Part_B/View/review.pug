@@ -10,7 +10,7 @@ body
   div.ReviewBody
     h1.header  Add A New Review
     .form
-      form(name='addReview' onsubmit='return validateForm()' action='/addReview1' method='post')
+      form(name='addReview' onsubmit='return validateForm()' action='/addReview' method='post')
         label(for='email') Email
         br
         input#email(pattern='[^ @]*@[^ @]*' type='text' name='email')

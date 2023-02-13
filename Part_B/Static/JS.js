@@ -60,6 +60,15 @@ allStars.forEach( (star, i) =>{
     }
 })
 
+document.querySelector('.geoLocation').addEventListener('click', function() {
+    console.log("sdsd");
+    window.location.pathname = '/nearest';
+  });
+  
+  document.querySelector('.reviews').addEventListener('click', function() {
+    window.location.pathname = '/highest-rated';
+  });
+  
 
 
 

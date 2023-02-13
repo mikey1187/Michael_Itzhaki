@@ -5,42 +5,41 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='/CSS.css')
   script(defer='' src='/JS.js')
-  title ExpertPage
+  title ExpertPageKnee 
 body 
   div.ExpertPageBody
     nav.navbar
       a#HomePage.nav-item(href='HomePage.html') HomePage
-      a#ExpertPage.nav-item(href='ExpertPage.html') ExpertPage
+      a#ExpertPage.nav-item(href='ExpertPage.htmlExpertPage.html/KneeExperts') ExpertPage
       a#Doctors.nav-item(href='Doctors.html') Doctors
     br
     br
     .grid-container-Exp
-      form(class= "grid-container-Exp" name='findExpert' action='/Doctors.html' method='post')
-        #helathCare.grid-item-Exp
-          select#helathCare1.select-Exp(name='helathCares')
-            option(value='helathCare11') helathCare
-            option(value='Clalit') Clalit
-            option(value='Macaabi') Macaabi
-            option(value='Meahudet') Meahudet
-        #subExpertise.grid-item-Exp
-          select#subExpertise1.select-Exp(name='subExpertises')
-            option(value='subExpertise') Sub Expertise
-            option(value='orto') Ortoscopy
-            option(value='Rebuild') Rebuild
-            option(value='replacement') Replacement
-        #region.grid-item-Exp
-          select#region1.select-Exp(name='regions')
-            option(value='region') Region
-            option(value='haifa') North
-            option(value='telaviv') TEl Aviv
-            option(value='beersheva') Beer Sheva
-        #hospital.grid-item-Exp
-          select#hospital1.select-Exp(name='hospitals')
-            option(value='Ziv') hospitals
-            option(value='Ziv') Ziv
-            option(value='Rambam') Rambam
-            option(value='Shiba')  Shiba
-            option(value='Soroka') Soroka
+      #helathCare.grid-item-Exp
+        select#helathCare1.select-Exp(name='helathCares')
+          option(value='helathCare11') helathCare
+          option(value='Clalit') Clalit
+          option(value='Macaabi') Macaabi
+          option(value='Meahudet') Meahudet
+      #subExpertise.grid-item-Exp
+        select#subExpertise1.select-Exp(name='subExpertise`s')
+          option(value='subExpertise') Sub Expertise
+          option(value='orto') Ortoscopy
+          option(value='Rebuild') Rebuild
+          option(value='replacement') Replacement
+      #region.grid-item-Exp
+        select#region1.select-Exp(name='regions')
+          option(value='region') Region
+          option(value='haifa') North
+          option(value='telaviv') TEl Aviv
+          option(value='beersheva') Beer Sheva
+      #hospital.grid-item-Exp
+        select#hospital1.select-Exp(name='hospital')
+          option(value='Ziv') hospitals
+          option(value='Ziv') Ziv
+          option(value='Rambam') Rambam
+          option(value='Shiba')  Shiba
+          option(value='Soroka') Soroka
     .wrapper
       a.cta(href='#')
         button.b-Exp(onclick='ToExperts()') Find Your Expert

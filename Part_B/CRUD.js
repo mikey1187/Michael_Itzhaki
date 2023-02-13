@@ -13,15 +13,17 @@ const addNewReview = function(req,res){
         "stars": req.body.rating
 
     };
+    console.log(newReview.stars);
     sql.query("INSERT INTO reviews SET ?", newReview, (err, mysqlres) => {
         if (err) {
         console.log("error: ", err);
-        res.status(400).send({message: "error in adding customer: " + err});
+        res.status(400).send({message: "error in adding review: " + err});
         return;
     }
     console.log("created review: ", { id: mysqlres.insertId, ...newReview });
-        res.send({message:"new review added successfully"});
+        res.render('reviewAdded');
         return;
         });
 };
 module.exports = {addNewReview};
+
